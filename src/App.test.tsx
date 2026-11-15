@@ -22,7 +22,21 @@ describe("RagingHD app", () => {
       "#top",
     );
   });
-});
 
-/*todo add tests for the Projects and Contact CTAs,
- including their destination IDs.*/
+  it("links the Explore Projects link to the Projects section", () => {
+    render(<App />);
+
+    expect(
+      screen.getByRole("link", { name: "Explore Projects" }),
+    ).toHaveAttribute("href", "#projects");
+  });
+
+  it("links the Get in Touch link to the Contact section", () => {
+    render(<App />);
+
+    expect(screen.getByRole("link", { name: "Get in Touch" })).toHaveAttribute(
+      "href",
+      "#contact",
+    );
+  });
+});
