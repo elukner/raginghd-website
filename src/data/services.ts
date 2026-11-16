@@ -2,6 +2,8 @@ export type Service = {
   name: string;
   description: string;
   status: "in-development" | "coming-soon" | "live";
+  availability?: "accepting-clients" | "waitlist" | "fully-booked";
+  pricing?: string;
   image?: string;
   url?: string;
   isPublic: boolean;
