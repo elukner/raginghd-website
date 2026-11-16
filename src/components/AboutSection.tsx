@@ -10,8 +10,8 @@ export default function AboutSection() {
       </h2>
 
       <p className="text-sm leading-relaxed text-slate-400">
-        A independent software developer who creates pratical producst and
-        offers services.
+        RagingHD is an independent software company building practical products
+        and exploring development services.
       </p>
     </section>
   );
