@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import ProjectsSection from "./components/ProjectsSection";
 import ServicesSection from "./components/ServicesSection";
 import AboutSection from "./components/AboutSection";
+import TechnologiesSection from "./components/TechnologiesSection";
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <ProjectsSection />
         <ServicesSection />
         <AboutSection />
+
+        <TechnologiesSection />
       </main>
     </div>
   );
