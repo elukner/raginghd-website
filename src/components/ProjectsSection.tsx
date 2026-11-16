@@ -5,14 +5,25 @@ export default function ProjectsSection() {
   const publicProjects = projects.filter((project) => project.isPublic);
 
   return (
-    <section id="projects" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">What I'm building</h2>
+    <section
+      id="projects"
+      aria-labelledby="projects-heading"
+      className="mx-auto max-w-6xl px-6 py-16 sm:py-24"
+    >
+      <h2
+        id="projects-heading"
+        className="mb-8 text-3xl font-bold tracking-tight sm:text-4xl"
+      >
+        What I'm building
+      </h2>
 
-      <div>
+      <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {publicProjects.map((project) => (
-          <ProjectCard project={project} />
+          <li key={project.name} className="min-w-0">
+            <ProjectCard project={project} />
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

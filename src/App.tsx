@@ -8,8 +8,8 @@ function App() {
       <Header />
 
       <main>
-        {<Hero />}
-        {<ProjectsSection />}
+        <Hero />
+        <ProjectsSection />
       </main>
     </div>
   );
