@@ -10,14 +10,11 @@ export default function ProjectsSection() {
       aria-labelledby="projects-heading"
       className="mx-auto max-w-6xl px-6 py-16 sm:py-24"
     >
-      <h2
-        id="projects-heading"
-        className="mb-8 text-3xl font-bold tracking-tight sm:text-4xl"
-      >
+      <h2 id="projects-heading" className="mb-5 text-lg font-semibold">
         What I'm building
       </h2>
 
-      <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {publicProjects.map((project) => (
           <li key={project.name} className="min-w-0">
             <ProjectCard project={project} />

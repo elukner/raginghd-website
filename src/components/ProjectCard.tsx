@@ -22,31 +22,31 @@ const statusLabels: Record<Project["status"], string> = {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card className="flex h-full flex-col border-white/15 bg-[#12121a] text-white">
-      <CardHeader>
-        <CardTitle className="text-xl font-semibold text-white">
+    <Card className="flex h-full flex-col gap-4 border border-white/25 bg-[#12121a] py-4 text-white">
+      <CardHeader className="px-4">
+        <CardTitle className="text-base font-semibold text-white">
           {project.name}
         </CardTitle>
 
-        <CardDescription className="text-sm leading-relaxed text-slate-300">
+        <CardDescription className="text-sm leading-relaxed text-slate-400">
           {project.description}
         </CardDescription>
       </CardHeader>
 
       {project.image && (
-        <CardContent>
-          <div className="flex h-44 items-center justify-center">
+        <CardContent className="px-4">
+          <div className="flex h-32 items-center justify-center">
             <img
               src={project.image}
               alt={`${project.name} project image`}
               loading="lazy"
-              className="max-h-40 max-w-full rounded-md object-contain"
+              className="max-h-28 max-w-full rounded-md object-contain"
             />
           </div>
         </CardContent>
       )}
 
-      <CardFooter className="mt-auto flex flex-wrap items-center justify-between gap-3">
+      <CardFooter className="mt-auto flex flex-wrap items-center justify-between gap-3 px-4">
         <span className="rounded-full border border-white/20 px-3 py-1 text-xs text-slate-300">
           {statusLabels[project.status]}
         </span>
