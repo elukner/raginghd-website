@@ -28,7 +28,7 @@ describe("ServicesSection", () => {
     expect(screen.queryByText("Private Test Service")).not.toBeInTheDocument();
   });
 
-  it("has an accessible section heading", () => {
+  it("has the correct accessible section heading", () => {
     render(<ServicesSection />);
 
     expect(screen.getByRole("region", { name: "Dev Help" })).toHaveAttribute(
