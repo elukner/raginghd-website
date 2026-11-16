@@ -24,11 +24,4 @@ export const projects: Project[] = [
     status: "in-development",
     isPublic: true,
   },
-  {
-    name: "Vibe Code Rescue",
-    description:
-      "A simple developer rescue service to debug vibe-coded projects made by non-software developers.",
-    status: "coming-soon",
-    isPublic: true,
-  },
 ];
