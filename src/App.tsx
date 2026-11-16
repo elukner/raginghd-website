@@ -5,6 +5,7 @@ import ServicesSection from "./components/ServicesSection";
 import AboutSection from "./components/AboutSection";
 import TechnologiesSection from "./components/TechnologiesSection";
 import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <TechnologiesSection />
         <ContactSection />
       </main>
+      <Footer />
     </div>
   );
 }
