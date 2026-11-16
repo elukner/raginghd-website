@@ -19,7 +19,7 @@ export default function ContactSection() {
         href={`mailto:${businessEmail}`}
         className="text-sm text-slate-300 underline underline-offset-4 hover:text-white"
       >
-        Email RagingHD
+        {businessEmail}
       </a>
     </section>
   );
