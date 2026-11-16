@@ -4,7 +4,7 @@ import ServiceCard from "./ServiceCard";
 import type { Service } from "../data/services";
 
 describe("ServiceCard", () => {
-  it("renders a coming-soon service without optional fields", () => {
+  it("renders an upcoming service without optional fields", () => {
     const service: Service = {
       name: "Test Service",
       description: "An upcoming development service.",
@@ -22,13 +22,17 @@ describe("ServiceCard", () => {
 
     expect(screen.queryByRole("img")).not.toBeInTheDocument();
     expect(screen.queryByRole("link")).not.toBeInTheDocument();
+    expect(screen.queryByText(/Pricing:/)).not.toBeInTheDocument();
+    expect(screen.queryByText("Accepting clients")).not.toBeInTheDocument();
   });
 
-  it("renders an image and link when provided", () => {
+  it("renders optional availability, pricing, image, and link", () => {
     const service: Service = {
-      name: "Live Test Service",
-      description: "An available development service.",
+      name: "Available Service",
+      description: "A test development service.",
       status: "live",
+      availability: "accepting-clients",
+      pricing: "From $150",
       image: "/services/test.png",
       url: "https://example.com",
       isPublic: true,
@@ -36,13 +40,17 @@ describe("ServiceCard", () => {
 
     render(<ServiceCard service={service} />);
 
+    expect(screen.getByText("Live")).toBeInTheDocument();
+    expect(screen.getByText("Accepting clients")).toBeInTheDocument();
+    expect(screen.getByText("Pricing: From $150")).toBeInTheDocument();
+
     expect(
       screen.getByRole("img", {
-        name: "Live Test Service service image",
+        name: "Available Service service image",
       }),
     ).toHaveAttribute("src", "/services/test.png");
 
-    expect(screen.getByRole("link", { name: "Visit tool" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "View service" })).toHaveAttribute(
       "href",
       "https://example.com",
     );
