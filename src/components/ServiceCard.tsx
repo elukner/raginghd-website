@@ -20,7 +20,7 @@ const statusLabels: Record<Service["status"], string> = {
   live: "Live",
 };
 
-export default function ProjectCard({ service }: ServiceCardProps) {
+export default function ServiceCard({ service }: ServiceCardProps) {
   return (
     <Card className="flex h-full flex-col gap-4 border border-white/25 bg-[#12121a] py-4 text-white">
       <CardHeader className="px-4">
@@ -38,7 +38,7 @@ export default function ProjectCard({ service }: ServiceCardProps) {
           <div className="flex h-32 items-center justify-center">
             <img
               src={service.image}
-              alt={`${service.name} project image`}
+              alt={`${service.name} service image`}
               loading="lazy"
               className="max-h-28 max-w-full rounded-md object-contain"
             />

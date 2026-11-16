@@ -1,14 +1,14 @@
 import { services } from "../data/services";
 import ServiceCard from "./ServiceCard";
 
-export default function ProjectsSection() {
+export default function ServicesSection() {
   const publicServices = services.filter((services) => services.isPublic);
 
   return (
     <section
       id="services"
-      aria-labelledby="projects-heading"
-      className="mx-auto max-w-6xl px-6 py-16 sm:py-24"
+      aria-labelledby="services-heading"
+      className="mx-auto max-w-6xl px-6 pt-6 pb-16 sm:pt-8 sm:pb-24"
     >
       <h2 id="services-heading" className="mb-5 text-lg font-semibold">
         Dev Help

@@ -8,7 +8,7 @@ export default function ProjectsSection() {
     <section
       id="projects"
       aria-labelledby="projects-heading"
-      className="mx-auto max-w-6xl px-6 py-16 sm:py-24"
+      className="mx-auto max-w-6xl px-6 pt-16 pb-6 sm:pt-24 sm:pb-8"
     >
       <h2 id="projects-heading" className="mb-5 text-lg font-semibold">
         What I'm building
