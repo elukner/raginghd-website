@@ -75,4 +75,48 @@ describe("RagingHD app", () => {
       "services",
     );
   });
+
+  it("renders the About, Technologies, and Contact sections", () => {
+    render(<App />);
+
+    expect(
+      screen.getByRole("region", { name: "About RagingHD" }),
+    ).toHaveAttribute("id", "about");
+
+    expect(
+      screen.getByRole("region", { name: "Tools & Technologies" }),
+    ).toHaveAttribute("id", "technologies");
+
+    expect(screen.getByRole("region", { name: "Contact" })).toHaveAttribute(
+      "id",
+      "contact",
+    );
+  });
+
+  it("provides an email contact link and working footer navigation", () => {
+    render(<App />);
+
+    const contactSection = screen.getByRole("region", {
+      name: "Contact",
+    });
+
+    expect(
+      within(contactSection).getByRole("link", {
+        name: "Email RagingHD",
+      }),
+    ).toHaveAttribute(
+      "href",
+      expect.stringMatching(/^mailto:[^\s@]+@[^\s@]+\.[^\s@]+$/),
+    );
+
+    const footer = screen.getByRole("contentinfo");
+
+    expect(
+      within(footer).getByRole("link", { name: "Contact" }),
+    ).toHaveAttribute("href", "#contact");
+
+    expect(
+      within(footer).getByRole("link", { name: "Back to top" }),
+    ).toHaveAttribute("href", "#top");
+  });
 });
