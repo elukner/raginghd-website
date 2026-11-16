@@ -15,6 +15,12 @@ export default function Header() {
             </span>
           </li>
           <li>
+            <a href="#services">Services</a>
+            <span aria-hidden="true" className="ml-2 text-slate-500">
+              ·
+            </span>
+          </li>
+          <li>
             <a href="#about">About</a>
             <span aria-hidden="true" className="ml-2 text-slate-500">
               ·
