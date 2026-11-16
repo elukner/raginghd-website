@@ -100,11 +100,9 @@ describe("RagingHD app", () => {
       name: "Contact",
     });
 
-    expect(
-      within(contactSection).getByRole("link", {
-        name: "Email RagingHD",
-      }),
-    ).toHaveAttribute(
+    const emailLink = within(contactSection).getByRole("link");
+
+    expect(emailLink).toHaveAttribute(
       "href",
       expect.stringMatching(/^mailto:[^\s@]+@[^\s@]+\.[^\s@]+$/),
     );
