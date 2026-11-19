@@ -1,5 +1,5 @@
 export default function ContactSection() {
-  const businessEmail = "elukner@gmail.com";
+  const businessEmail = "hello@raginghd.com";
 
   return (
     <section
